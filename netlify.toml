@@ -1,9 +1,41 @@
 [build]
-  base = "frontend"
-  publish = "frontend/build"
+  # Build command for the frontend
+  base = "frontend/"
+  publish = "frontend/build/"
   command = "npm run build"
 
+[build.environment]
+  # Treat warnings as non-fatal during build
+  CI = "false"
+  # Node.js version
+  NODE_VERSION = "18.17.0"
+
 [[redirects]]
+  # Handle client-side routing for React Router
   from = "/*"
   to = "/index.html"
   status = 200
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+# Environment-specific settings
+[context.production]
+  command = "npm run build"
+
+[context.deploy-preview]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"
