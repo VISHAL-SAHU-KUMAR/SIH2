@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useState, useEffect } from 'react';
+
 import { checkSystemHealth } from '../utils/api';
 import './SystemStatus.css';
 
