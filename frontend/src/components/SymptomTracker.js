@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useState } from 'react';
+
 import { Heart, AlertTriangle, CheckCircle, HelpCircle, Calendar, User, Activity } from 'lucide-react';
 
 const SymptomTracker = () => {
