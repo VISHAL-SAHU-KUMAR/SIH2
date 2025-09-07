@@ -54,7 +54,7 @@ function App() {
   const { t } = useTranslation();
 
   return (
-    <Router>
+    <Router basename="/">
       <div className="App">
         {/* Navbar */}
         <header className="App-header">
