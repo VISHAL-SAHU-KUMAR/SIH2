@@ -1,3 +1,5 @@
+# Netlify build config for SIH2 React SPA
+
 [build]
   base = "frontend"
   publish = "build"
